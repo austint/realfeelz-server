@@ -1,0 +1,40 @@
+{
+  "name": "realfeelz-server",
+  "version": "1.0.0",
+  "description": "The www.realfeelz.com server.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/austint/realfeelz-server.git"
+  },
+  "author": "Leslie Strauss and Austin Trafficante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austint/realfeelz-server/issues"
+  },
+  "homepage": "https://github.com/austint/realfeelz-server",
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "body-parser": "^1.9.3",
+    "bookshelf": "^0.7.9",
+    "express": "^4.10.4",
+    "knex": "^0.7.3",
+    "lodash": "^2.4.1",
+    "request": "^2.48.0",
+    "timekeeper": "0.0.5"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "coveralls": "^2.11.2",
+    "mocha": "^2.0.1",
+    "sinon": "^1.12.1",
+    "sinon-chai": "^2.6.0"
+  }
+}
