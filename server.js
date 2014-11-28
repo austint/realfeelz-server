@@ -11,6 +11,8 @@ var app = express();
 var resources = express();
 
 var env = process.env.NODE_ENV || 'development';
+var port = process.env.PORT || 3000;
+
 var knexConfig = require('./knexfile.js')[env];
 var knex = require('knex')(knexConfig);
 var bookshelf = require('bookshelf')(knex);
@@ -140,8 +142,6 @@ app.get('/*', function(req, res, next) {
 module.exports = app;
 
 // start server
-if (require.main === module) {
-  app.listen(config.port, function() {
-    return console.log('Express server listening on port %d in %s mode', config.port, app.get('env'));
+  app.listen(port, function() {
+    return console.log('Express server listening on port %d. Environment: %s.', port, app.get('env'));
   });
-}
