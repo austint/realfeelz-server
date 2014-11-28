@@ -1,0 +1,63 @@
+{
+  "request": {
+    "url": "/api/statements",
+    "method": "POST",
+    "bodyJSON": {
+      "statement": {
+        "body": "#santa told me that he is jewish."
+      }
+    }
+  },
+  "response": {
+    "bodyJSON": {
+      "statement": {
+        "id": 1,
+        "body": "#santa told me that he is jewish.",
+        "timeAdded": "2014-11-07T21:59:54.052Z"
+      },
+      "tags": [{
+        "id": 87,
+        "tag": "#santa"
+      }]
+    }
+  },
+
+  "database.statements-existing": [{
+    "id": 26,
+    "body": "I saw #santa kissing Mrs. Clause with a mouthful of cookie.",
+    "timeAdded": "2014-11-07T21:59:54.052Z"
+  }],
+  "database.tags-existing": [{
+    "id": 87,
+    "tag": "#santa"
+  }],
+  "database.statementsTags-existing": [{
+    "id": 54,
+    "statement_id": 26,
+    "tag_id": 87
+  }],
+
+  "database.statements": [{
+    "id": 1,
+    "body": "#santa told me that he is jewish.",
+    "timeAdded": "2014-11-07T21:59:54.052Z"
+  }, {
+    "id": 26,
+    "body": "I saw #santa kissing Mrs. Clause with a mouthful of cookie.",
+    "timeAdded": "2014-11-07T21:59:54.052Z"
+  }],
+  "database.tags": [{
+    "id": 87,
+    "tag": "#santa"
+  }],
+
+  "database.statementsTags": [{
+    "id": 1,
+    "statement_id": 1,
+    "tag_id": 87
+  }, {
+    "id": 54,
+    "statement_id": 26,
+    "tag_id": 87
+  }]
+}

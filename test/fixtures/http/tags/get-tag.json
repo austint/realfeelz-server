@@ -1,0 +1,23 @@
+{
+  "request": {
+    "url": "/api/tags",
+    "method": "GET",
+    "bodyJSON": {
+      "tag": {
+        "tag": "#santa"
+      }
+    }
+  },
+  "response": {
+    "bodyJSON": {
+      "tags": [{
+        "id": 23,
+        "tag": "#santa"
+      }]
+    }
+  },
+  "database.tags": [{
+    "id": 23,
+    "tag": "#santa"
+  }]
+}

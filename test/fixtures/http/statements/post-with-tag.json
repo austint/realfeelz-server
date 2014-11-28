@@ -1,0 +1,39 @@
+{
+  "request": {
+    "url": "/api/statements",
+    "method": "POST",
+    "bodyJSON": {
+      "statement": {
+        "body": "#santa told me that he is jewish."
+      }
+    }
+  },
+  "response": {
+    "bodyJSON": {
+      "statement": {
+        "id": 1,
+        "body": "#santa told me that he is jewish.",
+        "timeAdded": "2014-11-07T21:59:54.052Z"
+      },
+      "tags": [{
+        "id": 1,
+        "tag": "#santa"
+      }]
+    }
+  },
+  "database.statements": [{
+    "id": 1,
+    "body": "#santa told me that he is jewish.",
+    "timeAdded": "2014-11-07T21:59:54.052Z"
+  }],
+  "database.tags": [{
+    "id": 1,
+    "tag": "#santa"
+  }],
+
+  "database.statementsTags": [{
+    "id": 1,
+    "statement_id": 1,
+    "tag_id": 1
+  }]
+}

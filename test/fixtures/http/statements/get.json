@@ -1,0 +1,41 @@
+{
+  "request": {
+    "url": "/api/statements",
+    "method": "GET",
+    "bodyJSON": {
+      "statement": {
+        "body": "I was scared of Santa when I was younger. He looked too much like my mom."
+      }
+    }
+  },
+  "response": {
+    "bodyJSON": {
+      "statements": [{
+        "id": 4,
+        "body": "This one time I laughed when I saw a little boy pee his pants.",
+        "timeAdded": "2014-11-09T21:59:54.052Z"
+      },{
+        "id": 1,
+        "body": "I was scared of Santa when I was younger. He looked too much like my mom.",
+        "timeAdded": "2014-11-08T21:59:54.052Z"
+      },{
+        "id": 3,
+        "body": "This one time I peed my pants. True story.",
+        "timeAdded": "2014-11-07T21:59:54.052Z"
+      }]
+    }
+  },
+  "database.statements": [{
+    "id": 1,
+    "body": "I was scared of Santa when I was younger. He looked too much like my mom.",
+    "timeAdded": "2014-11-08T21:59:54.052Z"
+  },{
+    "id": 3,
+    "body": "This one time I peed my pants. True story.",
+    "timeAdded": "2014-11-07T21:59:54.052Z"
+  },{
+    "id": 4,
+    "body": "This one time I laughed when I saw a little boy pee his pants.",
+    "timeAdded": "2014-11-09T21:59:54.052Z"
+  }]
+}

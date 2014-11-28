@@ -1,0 +1,25 @@
+{
+  "request": {
+    "url": "/api/statements",
+    "method": "POST",
+    "bodyJSON": {
+      "statement": {
+        "body": "I was scared of Santa when I was younger. He looked too much like my mom."
+      }
+    }
+  },
+  "response": {
+    "bodyJSON": {
+      "statement": {
+        "id": 9,
+        "body": "I was scared of Santa when I was younger. He looked too much like my mom.",
+        "timeAdded": "2014-11-10T21:59:54.052Z"
+      }
+    }
+  },
+  "database.statements": [{
+    "id": 9,
+    "timeAdded": "2014-11-10T21:59:54.052Z",
+    "body": "I was scared of Santa when I was younger. He looked too much like my mom."
+  }]
+}

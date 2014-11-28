@@ -1,0 +1,17 @@
+{
+  "request": {
+    "url": "/api/captcha/verify",
+    "method": "POST",
+    "bodyJSON": {
+      "challenge": "abc",
+      "response": "123"
+    }
+  },
+  "response": {
+    "bodyJSON": {
+      "result": {
+        "verified": false
+      }
+    }
+  }
+}
