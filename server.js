@@ -36,6 +36,10 @@ app.set('Tag', Tag);
 app.set('StatementTag', StatementTag);
 
 app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  console.log('%s %s', req.method, req.url);
+  next();
+});
 
 // api routes
 var api = express.Router();
@@ -103,7 +107,7 @@ api.get('/tags', function(req, res) {
 api.post('/captcha/verify', function(req, res) {
   var privatekey = '6Ld0jv0SAAAAABBkmO1tSJJgbYIfMzb9kWyT0q3_';
   var remoteip = req.connection.remoteAddress;
-  var recaptchaAPIEndpoint= 'http://localhost:3333/api';
+  var recaptchaAPIEndpoint= 'https://www.google.com/recaptcha/api/verify';
 
   req.body.privatekey = privatekey;
   req.body.remoteip = remoteip;
