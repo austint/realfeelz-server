@@ -107,7 +107,13 @@ api.get('/tags', function(req, res) {
 api.post('/captcha/verify', function(req, res) {
   var privatekey = '6Ld0jv0SAAAAABBkmO1tSJJgbYIfMzb9kWyT0q3_';
   var remoteip = req.connection.remoteAddress;
-  var recaptchaAPIEndpoint= 'https://www.google.com/recaptcha/api/verify';
+  var recaptchaAPIEndpoint;
+
+  if (env = 'test') {
+    recaptchaAPIEndpoint = 'http://localhost:3333/api';
+  } else {
+    recaptchaAPIEndpoint = 'https://www.google.com/recaptcha/api/verify';
+  };
 
   req.body.privatekey = privatekey;
   req.body.remoteip = remoteip;
