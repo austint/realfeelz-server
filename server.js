@@ -94,6 +94,7 @@ api.get('/statements', function(req, res) {
   .then(function(statements) {
     var parsedStatements = statements.toJSON();
     res.json({ statements: parsedStatements });
+    console.log(parsedStatements);
   });
 });
 
@@ -109,10 +110,10 @@ api.post('/captcha/verify', function(req, res) {
   var remoteip = req.connection.remoteAddress;
   var recaptchaAPIEndpoint;
 
-  if (env = 'test') {
+  if (env === 'test') {
     recaptchaAPIEndpoint = 'http://localhost:3333/api';
   } else {
-    recaptchaAPIEndpoint = 'https://www.google.com/recaptcha/api/verify';
+    recaptchaAPIEndpoint = 'http://www.google.com/recaptcha/api/verify';
   };
 
   req.body.privatekey = privatekey;
@@ -136,7 +137,6 @@ api.post('/captcha/verify', function(req, res) {
         }
       };
     }
-
     res.send(responseJSON);
   });
 });
