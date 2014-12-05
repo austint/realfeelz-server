@@ -94,7 +94,6 @@ api.get('/statements', function(req, res) {
   .then(function(statements) {
     var parsedStatements = statements.toJSON();
     res.json({ statements: parsedStatements });
-    console.log(parsedStatements);
   });
 });
 
@@ -152,6 +151,6 @@ app.get('/*', function(req, res, next) {
 module.exports = app;
 
 // start server
-  app.listen(port, function() {
-    return console.log('Express server listening on port %d. Environment: %s.', port, app.get('env'));
-  });
+app.listen(port, function() {
+  return console.log('Express server listening on port %d. Environment: %s.', port, app.get('env'));
+});
