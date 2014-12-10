@@ -87,6 +87,7 @@ api.post('/statements', function(req, res) {
 });
 
 api.get('/statements', function(req, res) {
+  console.log('this is a get request for api/statements');
   Statement.query(function(queryBuilder) {
     queryBuilder.orderBy('timeAdded', 'desc');
   })
