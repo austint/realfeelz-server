@@ -147,12 +147,6 @@ app.get('/*', function(req, res, next) {
   next();
 }, resources);
 
-// error handling
-app.use(function(err, req, res, next){
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
-
 // expose app
 module.exports = app;
 
