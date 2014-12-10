@@ -87,7 +87,6 @@ api.post('/statements', function(req, res) {
 });
 
 api.get('/statements', function(req, res) {
-  console.log('this is a get request for api/statements');
   Statement.query(function(queryBuilder) {
     queryBuilder.orderBy('timeAdded', 'desc');
   })
@@ -147,6 +146,12 @@ app.get('/*', function(req, res, next) {
   req.url = '/index.html';
   next();
 }, resources);
+
+// error handling
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 // expose app
 module.exports = app;
