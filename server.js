@@ -36,8 +36,16 @@ app.set('Tag', Tag);
 app.set('StatementTag', StatementTag);
 
 app.use(bodyParser.json());
+
+// Custom middleware: log incoming requests
 app.use(function(req, res, next) {
   console.log('%s %s', req.method, req.url);
+  next();
+});
+
+// Custom middleware: Allow x-origin resource sharing with realfeelz-ui
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'https://realfeelz-ui.herokuapp.com');
   next();
 });
 
