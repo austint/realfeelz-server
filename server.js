@@ -45,6 +45,7 @@ app.use(function(req, res, next) {
 
 // Custom middleware: Allow x-origin resource sharing with realfeelz-ui
 app.use(function(req, res, next) {
+  req.header('Access-Control-Allow-Headers', 'https://realfeelz-ui.herokuapp.com');
   res.header('Access-Control-Allow-Origin', 'https://realfeelz-ui.herokuapp.com');
   next();
 });
