@@ -3,6 +3,7 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 var BPromise = require('bluebird');
 var request = BPromise.promisifyAll(require('request'));
 var _ = require('lodash');
@@ -43,12 +44,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Custom middleware: Allow x-origin resource sharing with realfeelz-ui
-app.use(function(req, res, next) {
-  req.header('Access-Control-Allow-Headers', 'https://realfeelz-ui.herokuapp.com');
-  res.header('Access-Control-Allow-Origin', 'https://realfeelz-ui.herokuapp.com');
-  next();
-});
+// CORS middleware: allow x-origin resource sharing with realfeelz-ui
+app.use(cors());
 
 // api routes
 var api = express.Router();
