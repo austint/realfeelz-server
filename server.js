@@ -111,7 +111,7 @@ api.get('/tags', function(req, res) {
 });
 
 api.post('/captcha/verify', function(req, res) {
-  var privatekey = '6LfcRv8SAAAAAE6gHvYsoidrtqYtdadQXm0QvcMy';
+  var privatekey = '6LeKIP8SAAAAAOMzdHECYJ9cbUZ7nkmenoWHbnfw';
   var remoteip = req.connection.remoteAddress;
   var recaptchaAPIEndpoint;
 
