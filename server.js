@@ -9,11 +9,10 @@ var request = BPromise.promisifyAll(require('request'));
 var _ = require('lodash');
 
 // keep heroku server awake - ping every 5 minutes (300000)
-var http = require('http');
-var http = require("http");
-setInterval(function() {
-    http.get("http://realfeelz-server.herokuapp.com");
-}, 300000);
+// var http = require('http');
+// setInterval(function() {
+//     http.get("http://realfeelz-server.herokuapp.com");
+// }, 300000);
 
 var app = express();
 var resources = express();
