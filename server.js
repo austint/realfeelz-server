@@ -1,5 +1,7 @@
 'use strict';
 
+require('newrelic');
+
 var express = require('express');
 var pg = require('pg');
 var path = require('path');

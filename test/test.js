@@ -28,12 +28,12 @@ describe('The app API.', __app(function() {
       .then(function() {
         return knex.raw('alter sequence statements_id_seq restart');
       })
-      .then(function() {
-        return knex.raw('alter sequence tags_id_seq restart');
-      })
-      .then(function() {
-        return knex.raw('alter sequence statements_tags_id_seq restart');
-      })
+      // .then(function() {
+      //   return knex.raw('alter sequence tags_id_seq restart');
+      // })
+      // .then(function() {
+      //   return knex.raw('alter sequence statements_tags_id_seq restart');
+      // })
       .then(function() {
         tk.freeze(time);
       })

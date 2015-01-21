@@ -1,0 +1,4 @@
+{"v":0,"level":30,"name":"newrelic","hostname":"leslie.local","pid":28090,"time":"2015-01-21T06:04:30.122Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"leslie.local","pid":28090,"time":"2015-01-21T06:04:31.414Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/873036/applications/6624844","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"leslie.local","pid":28090,"time":"2015-01-21T06:04:31.415Z","msg":"Connected to collector-136.newrelic.com:443 with agent run ID 28458248249167477.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"leslie.local","pid":28282,"time":"2015-01-21T06:15:17.575Z","msg":"Starting New Relic for Node.js connection process."}
